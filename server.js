@@ -5,7 +5,7 @@ import HttpsProxyAgent from "https-proxy-agent";
 const app = express();
 
 // بروكسي ألماني مجاني (ممكن يتغير)
-const proxy = "http://57.129.81.201:8080";
+const proxy = "http://188.212.22.19:8080";
 
 // Railway (أو أي استضافة) بيدي البورت من ENV
 const PORT = process.env.PORT || 3000;
