@@ -7,6 +7,9 @@ const app = express();
 // بروكسي ألماني مجاني
 const proxy = "http://57.129.81.201:8080";
 
+// Railway بيحدد البورت من متغير PORT
+const PORT = process.env.PORT || 3000;
+
 app.get("/proxy", async (req, res) => {
   try {
     const targetUrl = req.query.url;
@@ -24,6 +27,6 @@ app.get("/proxy", async (req, res) => {
   }
 });
 
-app.listen(3000, () => {
-  console.log("Proxy server running on port 3000");
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`Proxy server running on port ${PORT}`);
 });
